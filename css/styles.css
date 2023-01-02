@@ -4,6 +4,13 @@
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
+  --color-border: #ccc;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
 /* typography */
@@ -42,7 +49,7 @@ p {
   margin-top: 1rem;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 750px) {
   body {
     font-size: 1.8rem;
   }
@@ -67,7 +74,7 @@ a {
   font-weight: bold;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 750px) {
   a {
     font-size: 1.5rem;
   }
@@ -76,7 +83,73 @@ a {
 /* Icons */
 
 .icon {
-  width: 30px;
-  height: 30px;
+  width: 17px;
+  height: 17px;
   fill: var(--color-primary);
+}
+
+/* buttons */
+
+.btn {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  border: 0;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn--signin {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn--signin:hover {
+  background: #3a8ffd;
+}
+
+.btn--contactus {
+  background: var(--color-body);
+  color: black;
+}
+
+.btn--search {
+  padding: 5px;
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.btn--contactus:hover {
+  background: #00c8eb;
+}
+
+@media screen and (min-width: 750px) {
+  .btn {
+    font-size: 1.5rem;
+  }
+}
+
+/* inputs */
+
+#input {
+  padding: 1.5rem 3.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 30px;
+  outline: 0;
+  color: var(--color-headings);
+  font-size: 2rem;
+  width: 200px;
+  height: 34px;
+}
+
+@media screen and (min-width: 750px) {
+  #input {
+    font-size: 1.5rem;
+    width: 270px;
+    height: 30px;
+  }
 }
