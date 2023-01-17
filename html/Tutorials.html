@@ -29,7 +29,7 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 21.8 23.8"
             >
-              <defs>button</defs>
+              <defs>:</defs>
               <path
                 class="cls-1"
                 d="M11,17.9a8.7,8.7,0,0,0,.8,4.8,1,1,0,0,0,1.2.4.8.8,0,0,0,.4-1.2,8.3,8.3,0,0,1-.7-3.8,7.6,7.6,0,0,1,15.2,1.1A7.7,7.7,0,0,1,16.1,25a.8.8,0,0,0-1.2.2.9.9,0,0,0,.2,1.3A10,10,0,0,0,19.6,28a9.3,9.3,0,0,0,6.1-1.7l5.5,6.4a.9.9,0,0,0,.6.3.7.7,0,0,0,.7-.2.9.9,0,0,0,.1-1.2L27,25.2a8.9,8.9,0,0,0,2.6-5.8A9.3,9.3,0,1,0,11,17.9Z"
@@ -103,71 +103,55 @@
       </nav>
     </header>
     <main>
-      <div class="maincontainer">
-        <picture>
-          <source type="image/jpg" srcset="../images/home.jpg" />
-          <img
-            class="home__image home__image1"
-            src="../images/home.jpg"
-            alt="A girl looking at her phone"
-          />
-        </picture>
-        <div class="maincontent">
-          <h1>We Empower You</h1>
-          <p class="mainparagraph">
-            We help every student confidently learn anything, no matter what
-            they’re striving to achieve. Using our free tutorials, short notes
-            and practice exams, you can instantly create a more engaging
-            studying session.
-          </p>
+      <div class="study__tips">
+        <h1>Tutorials</h1>
+      </div>
+      <div class="grid grid--1x2">
+        <div class="choose">
+          <label for="grades">Choose Grade:</label>
+          <select name="grades" id="grades">
+            <option value="Grade 9">Grade 9</option>
+            <option value="Grade 10">Grade 10</option>
+            <option value="Grade 11">Grade 11</option>
+            <option value="Grade 12">Grade 12</option>
+          </select>
+        </div>
+        <div class="choose">
+          <label for="subjects">Choose Subject:</label>
+          <select name="subjects" id="subjects">
+            <option value="Biology">Biology</option>
+            <option value="Physics">Physics</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Mathematics">Mathematics</option>
+          </select>
         </div>
       </div>
-      <div class="card grid grid--1x2">
-        <div class="media__body">
-          <h2 class="card__header">Memorize faster for free</h2>
-          <p class="card__body">
-            Research shows that testing yourself with practice questions is more
-            effective than rereading your notes. From math to biology to
-            languages, our website is used by students for all the subjects.
-          </p>
+      <div class="grid grid--1x2 grid--1x2t">
+        <div div class="card media__image">
+          <video class="videos" src="../videos/YouCut.mp4" controls></video>
+          <p>Biology, Grade 9, Chapter 3.</p>
         </div>
-        <div class="media__image">
-          <p class="image__paragraph">
-            Study anywhere with our short and precises notes. all you need is
-            your phone or computer.
-          </p>
-          <picture>
-            <source type="image/webp" srcset="../images/home2.webp" />
-            <source type="image/jpg" srcset="../images/home2.jpg" />
-            <img
-              class="home__image"
-              src="../images/home2.jpg"
-              alt="A girl writing infront of her computer"
-            />
-          </picture>
+        <div div class="card media__image">
+          <video class="videos" src="../videos/YouCut.mp4" controls></video>
+          <p>Biology, Grade 9, Chapter 5.</p>
+        </div>
+        <div div class="card media__image">
+          <video class="videos" src="../videos/YouCut.mp4" controls></video>
+          <p>Biology, Grade 9, Chapter 2.</p>
         </div>
       </div>
       <div class="card grid grid--1x2">
         <div class="media__image">
-          <picture>
-            <source type="image/webp" srcset="../images/home3.webp" />
-            <source type="image/jpg" srcset="../images/home3.jpg" />
-            <img
-              class="home__image"
-              src="../images/home3.jpg"
-              alt="A man smiles looking at his computer"
-            />
-          </picture>
+          <p>
+            How To Study For Long Hours Without Being Tired.Listen this audio to
+            understand the secret of top scorers.
+          </p>
+          <a href="../files/english_subtitle.pdf" class="view__link"
+            >audio transcription</a
+          >
         </div>
         <div class="media__body">
-          <h3 class="card__header">
-            Be ready for test day by Learning and Testing yourself
-          </h3>
-          <p class="card__body">
-            Turn your studying into customizable practice tests. Go beyond
-            memorization with question types that challenge your recall. Study
-            effectively with practice tests so you’re prepared for your exams.
-          </p>
+          <audio src="../audios/YouCut.mp3" controls></audio>
         </div>
       </div>
     </main>

@@ -21,10 +21,10 @@ html {
 
 body {
   font-family: Inter, Arial, Helvetica, sans-serif;
-  font-size: 2.4rem;
+  font-size: 1.7rem;
   line-height: 1.5;
   color: var(--color-body);
-  background-color: lightgray;
+  background-color: #f3f3f3;
 }
 
 h1,
@@ -39,11 +39,11 @@ h1 {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 p {
@@ -55,10 +55,10 @@ p {
     font-size: 1.8rem;
   }
   h1 {
-    font-size: 8rem;
+    font-size: 3.3rem;
   }
   h2 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   h3 {
     font-size: 2.4rem;
@@ -92,6 +92,7 @@ a {
 .icon__search {
   width: 17px;
   height: 17px;
+  fill: #000;
 }
 
 /* buttons */
@@ -103,7 +104,7 @@ a {
   text-transform: uppercase;
   text-align: center;
   border: 0;
-  padding: 1rem 1rem;
+  padding: 1.5rem 1.5rem;
   border-radius: 10px;
   cursor: pointer;
   white-space: nowrap;
@@ -111,7 +112,7 @@ a {
 
 .btn--signin {
   background: var(--color-primary);
-  color: #fff;
+  color: #000;
 }
 
 .btn--signin:hover {
@@ -119,8 +120,8 @@ a {
 }
 
 .btn--contactus {
-  background: var(--color-body);
-  color: black;
+  background: var(--color-secondary);
+  color: #000;
 }
 
 .btn--contactus:hover {
@@ -130,7 +131,7 @@ a {
 .btn--search {
   padding: 5px;
   background: var(--color-secondary);
-  color: #fff;
+  color: #000;
 }
 
 @media screen and (min-width: 768px) {
@@ -162,9 +163,9 @@ a {
 
 .card {
   border-radius: 7px;
-  box-shadow: 0 0 20px 10px #f3f3f3;
+  box-shadow: 0 0 20px 10px lightgrey;
   overflow: hidden;
-  background-color: lightgrey;
+  background-color: #f3f3f3;
   padding: 3rem;
 }
 
@@ -183,19 +184,25 @@ a {
   .grid--1x2 {
     grid-template-columns: 1fr 1fr;
   }
+  .grid--1x3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
-/* home images*/
+/* home and about images*/
 
-.home__image {
+.home__image,
+.videos {
   width: 100%;
 }
 
-.home__image1 {
-  height: 28rem;
+.home__image1,
+.about__image {
+  height: 30rem;
 }
 
-.maincontent {
+.maincontent,
+.maincontent2 {
   margin-left: 3rem;
 }
 
@@ -203,14 +210,36 @@ a {
   .maincontainer {
     position: relative;
   }
+
   .maincontent {
     position: absolute;
-    top: 1rem;
-    left: 14rem;
     width: 38%;
+    left: 14rem;
+    top: 5rem;
+    left: 3rem;
   }
+
+  .maincontent2 {
+    position: absolute;
+    top: 5rem;
+    left: 3rem;
+    right: 3rem;
+  }
+
   .home__image1 {
     height: 43rem;
+  }
+
+  .mainparagraph {
+    color: #000;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 775px) {
+  .about__image {
+    height: 74rem;
+    opacity: 0.1;
   }
 }
 
@@ -252,6 +281,11 @@ a {
   display: none;
 }
 
+.dot {
+  color: #fff;
+  display: none;
+}
+
 .nav__item {
   padding: 0.5rem 2rem;
   border-bottom: 1px solid #222;
@@ -290,12 +324,7 @@ a {
   margin-right: 1rem;
 }
 
-.sticky__desktop {
-  position: sticky;
-  top: 0;
-}
-
-@media screen and (min-width: 774px) {
+@media screen and (min-width: 780px) {
   .nav__toggler {
     display: none;
   }
@@ -319,33 +348,305 @@ a {
   }
 }
 
+/* block */
+
+.block {
+  --padding-vertical: 5rem;
+  padding: var(--padding-vertical) 2rem;
+}
+
+.block--dark {
+  background: #000;
+  color: #7b858b;
+}
+
 /* footer */
 
 .footer {
-  background: #232323;
-  /* padding: 0 1rem; */
+  padding-top: 1rem;
 }
-
 .footer__section {
   padding: 2rem;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #393939;
 }
 
-/* .footer__body {
+.footer__heading {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.footer__brand {
+  margin-top: 5rem;
+  order: 2;
+}
+
+.footer__copyright {
+  font-size: 2.1rem;
+  color: #fff;
+  opacity: 0.3;
+}
+
+.footer a {
+  color: #777;
+  transition: color 0.3s;
+  font-size: 1.6rem;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer__section .list {
+  margin: 0;
+}
+
+.list {
+  list-style: none;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.footer__list {
+  margin-top: 0;
+}
+.p__number {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.email {
+  margin-bottom: 0.8rem;
+  font-size: 1.8rem;
+}
+
+.about {
+  margin-top: 0;
+  padding: 0;
+}
+
+.social__media {
+  font-size: 1.7rem;
+}
+
+.p__number,
+.social__media,
+.email {
   color: white;
-  font-size: 1.25rem;
 }
-
-.footer__noclick {
-  color: var(--color-body);
-  font-size: 2rem;
-}
-
-@media (min-width: 768px) {
-  .footer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0 1rem;
+@media screen and (min-width: 768px) {
+  .footer__sections {
+    grid-template-columns: repeat(3, 1fr);
   }
-} */
+  .social__media__section {
+    order: -1;
+  }
+  .contact__us {
+    order: 1;
+  }
+  .footer__copyright {
+    font-size: 1.5rem;
+  }
+  .footer__brand {
+    margin-top: 1rem;
+  }
+  .footer__heading {
+    font-size: 1.6rem;
+  }
+  .social__media {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 285px) {
+  .email {
+    font-size: 1.5rem;
+  }
+}
+
+/* study tips */
+
+.study__tips {
+  text-align: center;
+}
+
+.tables {
+  margin: auto;
+  padding: 1.5rem;
+}
+
+.table__container {
+  margin: 1rem;
+}
+
+.table-container,
+.table-row__head--title,
+.table-row__data {
+  margin: auto;
+  border: 1px solid #000;
+  padding: 1.5rem;
+  border-collapse: collapse;
+}
+
+/* TODO: better to implement the table from youtube my bro is somewhere else */
+
+/* course materials */
+
+.choose {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* TODO: change the color of the input text*/
+
+/* about us */
+
+.about__heading {
+  text-align: center;
+}
+
+.about__col {
+  padding: 1rem;
+}
+
+/* contact us */
+
+.contact__main {
+  width: fit-content;
+  height: fit-content;
+  display: block;
+  margin: auto;
+}
+
+.contact__body {
+  background-image: url(../images/contactfinal.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.button__container {
+  width: fit-content;
+  height: fit-content;
+  display: block;
+  margin: auto;
+}
+
+.about__label {
+  display: none;
+}
+
+.about__message {
+  width: 30rem;
+  height: 17rem;
+}
+
+.about__input {
+  margin-bottom: 2rem;
+  height: 4rem;
+  width: 30rem;
+}
+
+.signin__input {
+  height: 4rem;
+  width: 25rem;
+}
+
+.about__left {
+  margin: auto;
+}
+
+.about__right {
+  margin: auto;
+}
+
+.submit__button {
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .about__left {
+    position: absolute;
+    right: 50%;
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+  .about__right {
+    position: absolute;
+    left: 50%;
+    padding: 1rem;
+  }
+
+  .about__total {
+    width: 100%;
+    height: 33rem;
+    margin-top: 5rem;
+  }
+}
+
+/* Sign up */
+
+.signup__container {
+  width: fit-content;
+  height: fit-content;
+  display: block;
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+
+.signup__heading {
+  margin-right: 10rem;
+}
+
+.signup__text {
+  padding-left: 1rem;
+}
+
+.log__in {
+  color: rgb(46, 40, 29);
+}
+
+.log__in:hover {
+  color: rgb(93, 82, 60);
+}
+
+/* tutorials */
+
+@media screen and (min-width: 1050px) {
+  .grid--1x2t {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.contactus__btn {
+  margin-top: 1rem;
+  margin-bottom: 10rem;
+}
+
+.about__text {
+  margin-left: 1rem;
+  color: #000;
+  font-weight: bold;
+}
+
+.maincontainer {
+  background-image: image(study__tips3);
+}
+
+.view__link {
+  color: #000;
+}
+
+.view__link:hover {
+  color: rgb(45, 44, 44);
+}
+
+.password_error {
+  display: none;
+}
+
+#error {
+  color: red;
+}
